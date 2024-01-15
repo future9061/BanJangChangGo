@@ -3,7 +3,6 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import GlobalStyle from "./GlobalStyle";
 import { BrowserRouter } from "react-router-dom";
 import { QueryClient, QueryClientProvider } from "react-query";
 import { store } from "./store/store";
@@ -19,7 +18,6 @@ root.render(
   <QueryClientProvider client={queryClient}>
     <Provider store={store}>
       <BrowserRouter>
-        <GlobalStyle />
         <App />
       </BrowserRouter>
     </Provider>

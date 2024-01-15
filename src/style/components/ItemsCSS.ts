@@ -13,6 +13,10 @@ export const ItemsCSS = styled.ul`
     padding: 3%;
     gap: 10px;
 
+    &.red {
+      background: rgba(247, 90, 47, 0.1);
+    }
+
     > .box {
       width: 62px;
       height: 62px;

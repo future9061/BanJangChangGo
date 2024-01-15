@@ -20,4 +20,18 @@ export const ButtonCSS = styled.button`
         background: #dadada;
       }
     `}
+
+  ${(props) =>
+    props.id === "submit" &&
+    css`
+      background: black;
+      color: white;
+      width: 100%;
+      margin-top: 18px;
+      height: 47px;
+
+      &.gray {
+        background: rgba(193, 193, 193, 1);
+      }
+    `}
 `;

@@ -18,14 +18,14 @@ function OrderSheet({ loading }: { loading: boolean }) {
     { counter: 0 }
   );
 
-  const newArr = Items.filter((item) => item.counter !== 0);
-
-  const totalPrice = newArr.reduce(
+  const totalPrice = Items.reduce(
     (a, c) => {
       return { price: a.price + c.price * c.counter, counter: 1 };
     },
     { price: 0, counter: 1 }
   );
+
+  console.log(totalPrice);
 
   useEffect(() => {
     dispatch(TotalCounter({ counter: totalCouter.counter }));

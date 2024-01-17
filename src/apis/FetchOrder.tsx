@@ -29,8 +29,13 @@ function FetchOrder() {
   };
 
   useEffect(() => {
-    isSuccess && navigate("/complate");
-    isError && navigate("/error");
+    if (isSuccess) {
+      navigate("/complate");
+    }
+
+    if (isError) {
+      navigate("/error");
+    }
   }, [isSuccess, isError, isLoading]);
 
   return { handleSubmit, isLoading };

@@ -1,7 +1,18 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { CompleteCSS } from "../style/pages/CompleteCSS";
+import { useNavigate } from "react-router-dom";
 
 function Complete() {
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      navigate("/order");
+    }, 3000);
+
+    return () => clearTimeout(timeout);
+  }, []);
+
   return (
     <CompleteCSS>
       <img

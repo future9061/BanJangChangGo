@@ -47,7 +47,7 @@ function OrderSheet({ loading }: { loading: boolean }) {
       <Button
         children={isLoading ? "로딩 중..." : "주문하기"}
         id="submit"
-        className={loading && isLoading ? "gray" : ""}
+        className={loading || isLoading ? "gray" : ""}
         onClick={() =>
           total.totalCouter !== 0
             ? handleSubmit(total)

@@ -6,10 +6,10 @@ import { getData } from "../store/ItemSlice";
 
 function FetchItems() {
   const dispatch = useDispatch();
-
+  console.log("환경변수", process.env.REACT_APP_URL);
   const fetchItems = async () => {
     try {
-      const res = await axios.get("http://localhost:3001/items ");
+      const res = await axios.get(`${process.env.REACT_APP_URL}/items`);
       res.data.map((n: ItemType) => {
         n.counter = 0;
         return n;

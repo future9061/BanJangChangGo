@@ -9,7 +9,10 @@ function FetchOrder() {
 
   const fetchOrder = async (data: TotalDataType) => {
     try {
-      const res = await axios.post("http://localhost:3001/ordersheet", data);
+      const res = await axios.post(
+        `${process.env.REACT_APP_URL}/ordersheet`,
+        data
+      );
       return res;
     } catch (error) {
       throw error;
